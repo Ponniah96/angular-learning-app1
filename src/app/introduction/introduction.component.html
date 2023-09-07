@@ -1,0 +1,405 @@
+<div class="introduction">
+    <div class="header">
+        <div class="header-content">
+            <img
+                class="header-image"
+                width="40"
+                alt="Angular Logo"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+            />            
+        </div>
+    </div>
+    <div class="body">
+        <div class="card">
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Introduction:</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Angular is application designed framework and development platform which is mainly used to design single page sophisticated apps</p>
+                        <p><a class="link" href="https://angular.io/" target="_blank">Click here</a> to know more about angular from official website.</p>
+                        <h2>Features of Angular:</h2>
+                        <ul>
+                            <li>Angular is a component based framework</li>
+                            <li>Angular has its own rich in-build libraries like routing, forms,Http client services and so on </li>
+                            <li>Angular has its own CLI (command line interface) to develop, build, test application</li>
+                        </ul>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Pre Requisites of Angular:</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS </li>
+                        <li>JavaScript (Classes)</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Core Functions of Angular:</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title><h2 class="card-title">1.Components</h2></mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div>
+                            <p>Components are the building blocks of the angular application.</p>
+                            <p>Like React Components, angular components contains which is <b>reusable</b>.</p>
+                            <p>Angular Components contains <b>@Component decorator</b> which contains basic properties such as:</p>
+                            <ul>
+                                <li><b>CSS Selector:</b> Value we are using here is the actual name of the component which we can reuse as html tag in some other components
+                                    <div class="terminal" >
+                                        <pre>
+    @Component &#123;&#40;
+    selector: 'hello-world',
+    &#41;&#125; 
+    
+    In another component HTML,
+    &lt;hello-world&gt; &lt;/hello-world&gt;
+                                        </pre>
+                                    </div>
+                                </li>
+                                <li><b>TemplateUrl:</b> It will maps HTML template for this component</li>
+                                <li><b>styleurl: </b> It will add styles to this component.</li>
+                            </ul>
+                            <h3>Example:</h3>
+                            <div class="terminal" >
+                                <pre>
+    import &#123; Component &#125; from '@angular/core';
+    @Component &#123;&#40;
+    selector: 'hello-world',
+    template: '&lt;h1&gt; Hi&lt;/h1&gt;'
+    &#41;&#125;
+    export class HelloWorldComponent &#123;
+    // The code in this class drives the component's behavior.
+    &#125;                       
+                                </pre>
+                            </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <div class="accordion-padding"></div>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title><h2 class="card-title">2.Templates</h2></mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>Templates contains HTML code of the component where we can either add using template method in Component itself or we can create seperate HTML file and also by calling using templateUrl.</p>
+                            <div class="terminal" >
+                                <pre>
+import &#123; Component &#125; from '@angular/core';
+@Component &#123;&#40;
+template: 'helloworld.html'
+&#41;&#125;
+export class HelloWorldComponent &#123;
+    message:'hello-world'
+&#125;     
+
+helloworld.html
+&lt;&#123; &#123; message &#125; &#125;&gt;
+
+&lt;button 
+[id]='test'
+[style.color]='red'
+&#40; click &#41; = onClickFunction&#40;&#41;
+&gt;
+Click me!!!
+&lt;/button&gt;
+                                </pre>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <div class="accordion-padding"></div>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title><h2 class="card-title">3.Dependency Injection</h2></mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="card-content">
+                                <p>Dependency Injection helps you to declare dependency of your angular components.</p>
+                                <p>Angular creates own instantiation with these dependency.</p>
+                                <p>Example: Click on below button and check console</p>
+                                <button (click)="increaseCount()">Click Here</button>
+                                <div class="terminal" >
+                                    <pre>
+In service.ts 
+
+import &#123; Injectable &#125; from '@angular/core';
+@Injectable &#40;&#123;
+    providedIn: 'root'
+&#125;&#41;
+export class IntroductionServiceService &#123;
+    constructor &#40;&#41;  &#123; &#125;
+    increaseCountValue&#40;count:number&#41;&#123;
+    console.log&#40;'Dependency Injection Count value: ',count+1&#41;;
+    &#125;
+&#125;    
+
+In Component.ts 
+import &#123; IntroductionServiceService &#125; from '../introduction-service.service';
+export class IntroductionComponent &#123;
+    count=0;
+    constructor&#40;private dependencyInjectionServiceComponent:IntroductionServiceService&#41;&#123;&#125;
+    increaseCount&#40;&#41;&#123;
+    this.dependencyInjectionServiceComponent.increaseCountValue(this.count);
+    this.count++;
+    &#125;
+&#125;
+                                    </pre>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Angular CLI:</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Angular CLI is the command prompt like NPM to install, test, build angular application</p>
+                        <h3>Important Commands for angular CLI:</h3>
+                        <div class="terminal" >
+                            <pre>
+Install angular CLI:
+npm install -g @angular/cli
+ng new my-app
+cd ./my-app 
+
+Get local machine access:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Run Local app:
+ng serve --open
+
+Create Component:
+ng generate component xyz
+
+Test application:
+ng test
+
+Add Angular Material UI:
+ng add @angular/material
+
+Add PWA in our app:
+ng add @angular/pwa
+
+Build your application:
+ng build
+
+Create Service for our application:
+ng generate service introduction-service
+        
+                            </pre>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">First Party Libraries</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Please find list of first party libraries</p>
+                        <ul>
+                            <li>Router</li>
+                            <li>Forms</li>
+                            <li>Http Client</li>
+                            <li>Schematics</li>
+                            <li>Animations</li>
+                            <li>PWA</li>
+                        </ul>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Router</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Angular router is used to navigate angular app from single page to multiple apps</p>
+                        <h3>Example:</h3>
+                        <a class="link" [routerLink]="['/nav1']">
+                            Navigation Component 1
+                        </a> |
+                        <a class="link" [routerLink]="['/nav2']">
+                            Navigation Component 2
+                        </a>
+                        <router-outlet></router-outlet>
+                        <div class="terminal" >
+                            <pre>
+        
+<b>In app-routing-module.ts </b>
+import &#123; NgModule &#125; from '@angular/core';
+import &#123; RouterModule, Routes &#125; from '@angular/router';
+
+import &#123; NavigationComponentComponent &#125; from './navigation-component/navigation-component.component';
+import &#123; Navigation2Component &#125; from './navigation2/navigation2.component';
+
+const routes: Routes = [
+&#123;path:'nav1', component:NavigationComponentComponent&#125;,
+&#123;path:'nav2', component:Navigation2Component&#125;
+];
+
+@NgModule&#40;&#123;
+    imports: [RouterModule.forRoot&#40;routes&#41;],
+    exports: [RouterModule]
+&#125;&#41;
+export class AppRoutingModule &#123; &#125;
+
+<b>In introduction.component.html</b>
+&lt;a class="link" [routerLink]="['/nav1']"&gt;
+    Navigation Component 1
+&lt;/a&gt;
+&lt;a class="link" [routerLink]="['/nav2']"&gt;
+    Navigation Component 2
+&lt;/a&gt;
+                            </pre>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Forms</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Angular Forms are the build in forms which is available in angular library to build simple as well as complex forms.</p>
+                        <form [formGroup]="basicForm" (ngSubmit)="onSubmit()">
+                            <div>
+                                <label for="name">Name</label>
+                                <input id="name" placeholder="Enter Name"  type="text" formControlName="name">
+                            </div>
+                            <div>
+                                <label for="age">Age</label>
+                                <input id="age" placeholder="Enter Age"  type="number" formControlName="age">
+                            </div>
+                            <div>
+                                <label for="gender">Gender</label>
+                                <input id="gender" placeholder="Enter gender"  type="text" formControlName="gender">
+                            </div>
+                            <div>
+                                <label for="role">Role</label>
+                                <input id="role" placeholder="Enter Current designation"  type="text" formControlName="role">
+                            </div>
+                            <button type="submit" class="button">Submit</button>
+                        </form>
+                        <div class="terminal" >
+                            <pre>
+        
+<b>In app.module.ts</b>
+import &#123; ReactiveFormsModule &#125; from '@angular/forms';
+@NgModule&#40;&#123;
+    imports: [
+        ReactiveFormsModule
+    ],
+&#125;&#41;
+
+<b>In introduction.component.ts</b>
+import &#123; FormBuilder &#125; from '@angular/forms';
+export class IntroductionComponent &#123;
+    basicForm=this.formBuilder.group&#40;&#123;
+        name:'',
+        age:0,
+        gender:'',
+        role:''
+        &#125;&#41;;  
+    constructor&#40;
+        private formBuilder:FormBuilder,
+        &#41;&#123;&#125;  
+    onSubmit&#40;&#41;: void &#123;
+        console.log&#40;'Form values: ',this.basicForm.value&#41;;
+        this.basicForm.reset&#40;&#41;;
+        &#125;
+    &#125;
+
+<b>In introduction.component.html</b>
+&lt;form [formGroup]="basicForm" &#40;ngSubmit&#41;="onSubmit()"&gt;
+    &lt;div&gt;
+        &lt;label for="name"&gt;Name&lt;/label&gt;
+        &lt;input id="name" placeholder="Enter Name"  type="text" formControlName="name"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="button"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                            </pre>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><h2 class="card-title">Angular Material</h2></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="card-content">
+                        <p>Angular material is the material components of angular. (i.e: Angular components with predefined styles and functions) </p>
+                        <h3 class="card-subtitle">Advantages</h3>
+                        <ul>
+                            <li>HighQuality:    Internationalized acceptable components ensures with multiple level of testing.</li>
+                            <li>Versatile:      You can use components with angular material design or else use your own components</li>
+                            <li>Frictionless:   Work in seamlessly</li>
+                        </ul>
+                        <h3 class="card-subtitle">Display Toggle Component</h3>
+                        <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+                        <h3 class="card-subtitle">Display Button Component</h3>
+                        <div><button mat-button color="primary" >Primary</button></div>
+                        <div><button mat-stroke-button color="basic">Basic</button></div>
+                        <div><button mat-raised-button color="accent">Accent</button></div>
+                        <div><button mat-flat-button color="warn">Warn</button></div>
+                        <div>
+                            <button mat-icon-button color="warn">
+                                <mat-icon>favorite</mat-icon>
+                            </button>
+                        </div>
+                        <div>
+                            <button mat-fab color="primary">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                        <div>
+                            <button mat-mini-fab color="accent">
+                                <mat-icon>menu</mat-icon>
+                            </button>
+                        </div>
+                        <h3 class="card-subtitle">Accordion Component</h3>
+                        <mat-accordion>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>Accordion Title</mat-panel-title>
+                                    <mat-panel-description>Accordion Description</mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Accordion Hide/Show Text</p>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="accordion-padding"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            Thank You!!!
+        </div>
+    </div>
+</div>

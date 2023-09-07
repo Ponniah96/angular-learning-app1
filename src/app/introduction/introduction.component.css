@@ -1,0 +1,85 @@
+.header-content,
+.footer-content,
+.body{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+.header{
+    background-color: rgb(25, 118, 210);
+    color: white !important;
+    position:fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+    z-index: 1;
+}
+.header-content span{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header-image{
+    padding-top: 10px;
+}
+.body{
+    padding-top: 100px;
+    color: rgb(68, 68, 68);
+    overflow: auto;
+    min-height: 80vh;
+}
+.footer{
+    border-top:2px solid #d0d0d0;
+    color: rgb(68, 68, 68);
+}
+.link{
+    color: #1976d2;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline; 
+    }
+}
+.card-subtitle{
+    font-weight: 500;
+    margin: 20px 0px;
+}
+.terminal {
+position: relative;
+width: 80%;
+max-width: 600px;
+border-radius: 6px;
+padding-top: 45px;
+margin-top: 8px;
+overflow: auto;
+background-color: rgb(15, 15, 16);
+}
+.terminal::before {
+content: "\2022 \2022 \2022";
+position: absolute;
+top: 0;
+left: 0;
+height: 4px;
+background: rgb(58, 58, 58);
+color: #c2c3c4;
+width: 100%;
+font-size: 2rem;
+line-height: 0;
+padding: 14px 0;
+text-indent: 4px;
+}
+.terminal pre {
+font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+color: white;
+padding: 0 1rem 1rem;
+margin: 0;
+}
+.card-title{
+    padding-top: 10px;
+    @media(max-width:768px){
+        font-size: 1rem;
+    }
+}
+.accordion-padding{
+    margin: 10px 0px;
+}
