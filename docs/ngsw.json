@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1694528162202,
+  "timestamp": 1694619577924,
   "index": "my-app/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "my-app/favicon.ico",
         "my-app/index.html",
-        "my-app/main.42d6aaba309a6c2b.js",
+        "my-app/main.695b42a2ca16da43.js",
         "my-app/manifest.webmanifest",
         "my-app/polyfills.4752ba083e9272b5.js",
         "my-app/runtime.771c5fa6dd11d129.js",
@@ -52,8 +52,8 @@
     "my-app/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
     "my-app/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
     "my-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "my-app/index.html": "8b4dcb2a144cbac83835ec3cf136fc01b588d62f",
-    "my-app/main.42d6aaba309a6c2b.js": "e84521e9974c0860c037adff193a91fa659e45e2",
+    "my-app/index.html": "08a6068e28f612892fd74f46b8c425d9ed158a3a",
+    "my-app/main.695b42a2ca16da43.js": "1cf842e6ed6638f24b61030e96eecb84269f30d8",
     "my-app/manifest.webmanifest": "c49e6c62642707271796c25585f7293653dc4449",
     "my-app/polyfills.4752ba083e9272b5.js": "346ae290de17526fd247e532e82b915dff55b833",
     "my-app/runtime.771c5fa6dd11d129.js": "e5408a581cc8c0e0678491e362ff94574f06e9c5",

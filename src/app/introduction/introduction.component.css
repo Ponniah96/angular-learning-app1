@@ -24,10 +24,10 @@
     padding-top: 10px;
 }
 .body{
-    padding-top: 100px;
+    /* padding-top: 100px; */
     color: rgb(68, 68, 68);
     overflow: auto;
-    min-height: 80vh;
+    /* min-height: 80vh; */
 }
 .footer{
     border-top:2px solid #d0d0d0;
@@ -100,4 +100,7 @@ margin: 0;
 .grid-list{
     background-color: #1976d2;
     color: white;
+}
+.example-spacer{
+    flex: 1 1 auto;
 }

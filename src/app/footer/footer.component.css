@@ -1,0 +1,11 @@
+.footer{
+    background-color: rgb(25, 118, 210);
+    color: white !important;
+}
+.footer-menu{
+    color: white;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}

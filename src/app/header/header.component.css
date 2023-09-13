@@ -1,0 +1,14 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+.drawer-navBar{
+    padding: 10px;
+    width: 40%;
+}
+.header{
+    background-color: rgb(25, 118, 210);
+    color: white !important;
+}
+.header-menu{
+    padding: 0 50px;
+}

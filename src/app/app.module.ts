@@ -10,12 +10,16 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { NavigationComponentComponent } from './navigation-component/navigation-component.component';
 import { Navigation2Component } from './navigation2/navigation2.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -30,6 +34,8 @@ import { Navigation2Component } from './navigation2/navigation2.component';
     MatSidenavModule,
     MatMenuModule,
     MatGridListModule,
+    MatToolbarModule,
+    MatListModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -41,9 +47,11 @@ import { Navigation2Component } from './navigation2/navigation2.component';
     AppComponent,
     IntroductionComponent,
     NavigationComponentComponent,
-    Navigation2Component
+    Navigation2Component,
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [],
-  bootstrap: [IntroductionComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
