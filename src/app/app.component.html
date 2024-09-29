@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div [ngStyle]="{'display': DesktopHeaderMenu}">
-  <app-introduction ></app-introduction>
+<div *ngIf="showDesktopMenu">
+  <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

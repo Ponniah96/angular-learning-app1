@@ -1,0 +1,62 @@
+<div class="introduction">
+  <div class="body">
+      <div class="card">
+          <h1>Angular CLI</h1>
+          <div class="accordion-padding"></div>
+          <mat-accordion >
+              <mat-expansion-panel expanded>
+                  <mat-expansion-panel-header>
+                      <mat-panel-title><h2 class="card-title">Angular CLI:</h2></mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div class="card-content">
+                      <p>Angular CLI is the command prompt like NPM to install, test, build angular application</p>
+                      <h3>Important Commands for angular CLI:</h3>
+                      <div class="terminal" >
+                          <pre>
+Install angular CLI:
+npm install -g @angular/cli
+sudo npm install -g @angular/cli( For MacBook)
+ng new my-app
+cd ./my-app 
+
+Get local machine access:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Run Local app:
+ng serve --open
+sudo ng serve (For Mac Book)
+
+Create Component:
+ng generate component xyz
+
+Test application:
+ng test
+
+Add Angular Material UI:
+ng add @angular/material
+
+Add PWA in our app:
+ng add @angular/pwa
+
+Build your application:
+ng build
+
+Create Service for our application:
+ng generate service introduction-service
+
+Deploy Application using GitHub:
+ng build --output-path docs --base-href my-app
+git add . 
+git status 
+git commit -m "Push Code Comments"
+git push -u origin main
+      
+                          </pre>
+                      </div>
+                  </div>
+              </mat-expansion-panel>
+          </mat-accordion>
+          
+      </div>
+  </div>
+</div>

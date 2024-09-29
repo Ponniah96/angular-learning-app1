@@ -8,44 +8,32 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'my-app';
-  public gridColumns=0;
-  public MobileHeaderMenu='';
-  public DesktopHeaderMenu='';
+  public showDesktopMenu = true;
   constructor(breakPointObserver:BreakpointObserver)
   {
     breakPointObserver.observe([Breakpoints.XSmall]).subscribe(result=>{
       if(result.matches){
-        this.gridColumns=2;
-        this.MobileHeaderMenu='block';
-        this.DesktopHeaderMenu='none';
+        this.showDesktopMenu = false;
       }
     })
     breakPointObserver.observe([Breakpoints.Small]).subscribe(result=>{
       if(result.matches){
-        this.gridColumns=2;
-        this.MobileHeaderMenu='block';
-        this.DesktopHeaderMenu='none';
+        this.showDesktopMenu = false;
       }
     })
     breakPointObserver.observe([Breakpoints.Medium]).subscribe(result=>{
       if(result.matches){
-        this.gridColumns=4;
-        this.MobileHeaderMenu='none';
-        this.DesktopHeaderMenu='block';
+        this.showDesktopMenu = true;
       }
     })
     breakPointObserver.observe([Breakpoints.Large]).subscribe(result=>{
       if(result.matches){
-        this.gridColumns=4;
-        this.MobileHeaderMenu='none';
-        this.DesktopHeaderMenu='block';
+        this.showDesktopMenu = true;
       }
     })
     breakPointObserver.observe([Breakpoints.XLarge]).subscribe(result=>{
       if(result.matches){
-        this.gridColumns=4;
-        this.MobileHeaderMenu='none';
-        this.DesktopHeaderMenu='block';
+        this.showDesktopMenu = true;
       }
     })
   }

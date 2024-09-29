@@ -1,0 +1,76 @@
+<div class="introduction">
+  <div class="body">
+      <div class="card">
+          <h1>Angular Forms</h1>
+          <div class="accordion-padding"></div>
+          <mat-accordion>
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><h2 class="card-title">Forms</h2></mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="card-content">
+                    <p>Angular Forms are the build in forms which is available in angular library to build simple as well as complex forms.</p>
+                    <form [formGroup]="basicForm" (ngSubmit)="onSubmit()">
+                        <div>
+                            <label for="name">Name</label>
+                            <input id="name" placeholder="Enter Name"  type="text" formControlName="name">
+                        </div>
+                        <div>
+                            <label for="age">Age</label>
+                            <input id="age" placeholder="Enter Age"  type="number" formControlName="age">
+                        </div>
+                        <div>
+                            <label for="gender">Gender</label>
+                            <input id="gender" placeholder="Enter gender"  type="text" formControlName="gender">
+                        </div>
+                        <div>
+                            <label for="role">Role</label>
+                            <input id="role" placeholder="Enter Current designation"  type="text" formControlName="role">
+                        </div>
+                        <button type="submit" class="button">Submit</button>
+                    </form>
+                    <div class="terminal" >
+                        <pre>
+    
+<b>In app.module.ts</b>
+import &#123; ReactiveFormsModule &#125; from '@angular/forms';
+@NgModule&#40;&#123;
+imports: [
+    ReactiveFormsModule
+],
+&#125;&#41;
+
+<b>In introduction.component.ts</b>
+import &#123; FormBuilder &#125; from '@angular/forms';
+export class IntroductionComponent &#123;
+basicForm=this.formBuilder.group&#40;&#123;
+    name:'',
+    age:0,
+    gender:'',
+    role:''
+    &#125;&#41;;  
+constructor&#40;
+    private formBuilder:FormBuilder,
+    &#41;&#123;&#125;  
+onSubmit&#40;&#41;: void &#123;
+    console.log&#40;'Form values: ',this.basicForm.value&#41;;
+    this.basicForm.reset&#40;&#41;;
+    &#125;
+&#125;
+
+<b>In introduction.component.html</b>
+&lt;form [formGroup]="basicForm" &#40;ngSubmit&#41;="onSubmit()"&gt;
+&lt;div&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input id="name" placeholder="Enter Name"  type="text" formControlName="name"&gt;
+&lt;/div&gt;
+&lt;button type="submit" class="button"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                        </pre>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+  </div>
+</div>

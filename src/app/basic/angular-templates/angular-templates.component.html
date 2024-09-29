@@ -1,0 +1,38 @@
+<div class="introduction">
+  <div class="body">
+      <div class="card">
+          <h1>Angular Templates</h1>
+          <div class="accordion-padding"></div>
+          <mat-accordion>
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><h2 class="card-title">2.Templates</h2></mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Templates contains HTML code of the component where we can either add using template method in Component itself or we can create seperate HTML file and also by calling using templateUrl.</p>
+                <div class="terminal" >
+                    <pre>
+import &#123; Component &#125; from '@angular/core';
+@Component &#123;&#40;
+template: 'helloworld.html'
+&#41;&#125;
+export class HelloWorldComponent &#123;
+message:'hello-world'
+&#125;     
+
+helloworld.html
+&lt;&#123; &#123; message &#125; &#125;&gt;
+
+&lt;button 
+[id]='test'
+[style.color]='red'
+&#40; click &#41; = onClickFunction&#40;&#41;
+&gt;
+Click me!!!
+&lt;/button&gt;
+                    </pre>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+  </div>
+</div>

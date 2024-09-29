@@ -20,6 +20,12 @@ import { NavigationComponentComponent } from './navigation-component/navigation-
 import { Navigation2Component } from './navigation2/navigation2.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AngularCLIComponent } from './angular-cli/angular-cli.component';
+import { AngularComponentsComponent } from './basic/angular-components/angular-components.component';
+import { AngularTemplatesComponent } from './basic/angular-templates/angular-templates.component';
+import { AngularRoutesComponent } from './basic/angular-routes/angular-routes.component';
+import { AngularFormsComponent } from './basic/angular-forms/angular-forms.component';
+import { AngularMaterialHomepageComponent } from './angular-material/angular-material-homepage/angular-material-homepage.component';
 
 @NgModule({
   imports: [
@@ -49,7 +55,13 @@ import { FooterComponent } from './footer/footer.component';
     NavigationComponentComponent,
     Navigation2Component,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AngularCLIComponent,
+    AngularComponentsComponent,
+    AngularTemplatesComponent,
+    AngularRoutesComponent,
+    AngularFormsComponent,
+    AngularMaterialHomepageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

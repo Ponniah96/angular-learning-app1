@@ -1,95 +1,95 @@
-<mat-toolbar class="header">
-    <img
-        width="40"
-        alt="Angular Logo"
-        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />  
-    <button mat-button style="padding-left: 0px;">NGULAR</button>  
-    <div [ngStyle]="{'display': DesktopHeaderMenu}">
-        <button mat-button [matMenuTriggerFor]="responsiveHeader1" class="header-menu">Basic</button>     
-        <mat-menu #responsiveHeader1="matMenu">
-            <button mat-menu-item >Components</button>
-            <button mat-menu-item >Templates</button>
-            <button mat-menu-item >Ng Modules</button>
-            <button mat-menu-item >Routing</button>
-            <button mat-menu-item >Forms</button>
-        </mat-menu> 
-        <!-- <mat-menu #responsiveHeader1items="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  
-        <mat-menu #responsiveHeader1item="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>    -->
-        <button mat-button [matMenuTriggerFor]="responsiveHeader2">Advanced</button>     
-        <mat-menu #responsiveHeader2="matMenu">
-            <button mat-menu-item >Directives</button>
-            <button mat-menu-item >Dependency Injection</button>
-            <button mat-menu-item >Standalone</button>
-            <button mat-menu-item >Change Detection</button>
-            <button mat-menu-item>HTTP Client</button>
-        </mat-menu> 
-        <!-- <mat-menu #responsiveHeader2items="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  
-        <mat-menu #responsiveHeader2item="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  -->
-    </div>
-    <div [ngStyle]="{'display': MobileHeaderMenu, 'width':'inherit'}">
-        <div style="display: flex;">
-            <span class="example-spacer"></span>
-            <button mat-icon-button class="example-icon" (click)="mobileHeader.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button> 
+<div *ngIf="!showMobileMenu">
+    <mat-toolbar class="header">
+        <img
+            width="40"
+            alt="Angular Logo"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+            [routerLink]="['/']"
+        />  
+        <button mat-button style="padding-left: 0px;" [routerLink]="['/']">NGULAR</button>  
+        <div >
+            <button mat-button [matMenuTriggerFor]="responsiveHeader1" class="header-menu">Basic</button>     
+            <mat-menu #responsiveHeader1="matMenu">
+                <button mat-menu-item [routerLink]="['/angular-components']" >Components</button>
+                <button mat-menu-item [routerLink]="['/angular-templates']" >Templates</button>
+                <!-- <button mat-menu-item >Ng Modules</button> -->
+                <button mat-menu-item [routerLink]="['/angular-routes']" >Routing</button>
+                <button mat-menu-item [routerLink]="['/angular-forms']" >Forms</button>
+            </mat-menu> 
+            <!-- <mat-menu #responsiveHeader1items="matMenu">
+                <button mat-menu-item>Item</button>
+                <button mat-menu-item>Item</button>
+            </mat-menu>  
+            <mat-menu #responsiveHeader1item="matMenu">
+                <button mat-menu-item>Item</button>
+                <button mat-menu-item>Item</button>
+            </mat-menu>    -->
+            <button mat-button [matMenuTriggerFor]="responsiveHeader2" class="header-menu">Advanced</button>     
+            <mat-menu #responsiveHeader2="matMenu">
+                <button mat-menu-item >Directives</button>
+                <button mat-menu-item >Dependency Injection</button>
+                <button mat-menu-item >Standalone</button>
+                <button mat-menu-item >Change Detection</button>
+                <button mat-menu-item>HTTP Client</button>
+            </mat-menu> 
+            <button mat-button [matMenuTriggerFor]="responsiveHeader3" class="header-menu">Angular CLI</button>     
+            <mat-menu #responsiveHeader3="matMenu">
+                <button mat-menu-item  [routerLink]="['/angular-cli']">Commands</button>
+            </mat-menu>
+            <button mat-button  class="header-menu" [routerLink]="['/angular-material']">Angular Material</button> 
         </div>
-    </div>
-</mat-toolbar>
-<mat-drawer-container [ngStyle]="{'display': MobileHeaderMenu}" class="drawer-container" [hasBackdrop]="true">
-    <mat-drawer #mobileHeader class="drawer-navBar" mode="side">
-        <div style="display: flex;">
-            <span class="example-spacer"></span>
-            <button mat-icon-button (click)="mobileHeader.toggle()">
-                <mat-icon>close</mat-icon>
-            </button>
+    </mat-toolbar>
+</div>
+<div *ngIf="showMobileMenu">
+    <mat-toolbar class="header">
+        <img
+            width="40"
+            alt="Angular Logo"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+            [routerLink]="['/']"
+        />  
+        <button mat-button style="padding-left: 0px;" [routerLink]="['/']">NGULAR</button> 
+        <div [ngStyle]="{'width':'inherit'}">
+            <div style="display: flex;">
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon" (click)="mobileHeader.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button> 
+            </div>
         </div>
-        <button mat-button [matMenuTriggerFor]="responsiveMobileHeader1" style="display: block;">Basic</button>     
-        <mat-menu #responsiveMobileHeader1="matMenu">
-            <button mat-menu-item >Components</button>
-            <button mat-menu-item >Templates</button>
-            <button mat-menu-item >Ng Modules</button>
-            <button mat-menu-item >Routing</button>
-            <button mat-menu-item >Forms</button>
-        </mat-menu>
-        <!-- <mat-menu #responsiveMobileHeader1items="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  
-        <mat-menu #responsiveMobileHeader1item="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>    -->
-        <button mat-button [matMenuTriggerFor]="responsiveMobileHeader2" style="display: block;">Advanced</button>     
-        <mat-menu #responsiveMobileHeader2="matMenu">
-            <button mat-menu-item >Directives</button>
-            <button mat-menu-item >Dependency Injection</button>
-            <button mat-menu-item >Standalone</button>
-            <button mat-menu-item >Change Detection</button>
-            <button mat-menu-item>HTTP Client</button>
-        </mat-menu> 
-        <!-- <mat-menu #responsiveMobileHeader2items="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  
-        <mat-menu #responsiveMobileHeader2item="matMenu">
-            <button mat-menu-item>Item</button>
-            <button mat-menu-item>Item</button>
-        </mat-menu>  -->
-    </mat-drawer>
-    <mat-drawer-content class="drawer-content">  
-        <app-introduction></app-introduction>
-    </mat-drawer-content>
-</mat-drawer-container>
+    </mat-toolbar>
+    <mat-drawer-container class="drawer-container" [hasBackdrop]="true">
+        <mat-drawer #mobileHeader class="drawer-navBar" mode="side">
+            <div style="display: flex;">
+                <span class="example-spacer"></span>
+                <button mat-icon-button (click)="mobileHeader.toggle()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+            <button mat-button [matMenuTriggerFor]="responsiveMobileHeader1" style="display: block;">Basic</button>     
+            <mat-menu #responsiveMobileHeader1="matMenu">
+                <button mat-menu-item [routerLink]="['/angular-components']" >Components</button>
+                <button mat-menu-item [routerLink]="['/angular-templates']" >Templates</button>
+                <!-- <button mat-menu-item >Ng Modules</button> -->
+                <button mat-menu-item [routerLink]="['/angular-routes']" >Routing</button>
+                <button mat-menu-item [routerLink]="['/angular-forms']" >Forms</button>
+            </mat-menu>
+            <button mat-button [matMenuTriggerFor]="responsiveMobileHeader2" style="display: block;">Advanced</button>     
+            <mat-menu #responsiveMobileHeader2="matMenu">
+                <button mat-menu-item >Directives</button>
+                <button mat-menu-item >Dependency Injection</button>
+                <button mat-menu-item >Standalone</button>
+                <button mat-menu-item >Change Detection</button>
+                <button mat-menu-item>HTTP Client</button>
+            </mat-menu> 
+            <button mat-button [matMenuTriggerFor]="responsiveMobileHeader3" style="display: block;">Angular CLIs</button>     
+            <mat-menu #responsiveMobileHeader3="matMenu">
+                <button mat-menu-item [routerLink]="['/angular-cli']">Commands</button>
+            </mat-menu> 
+            <button mat-button [routerLink]="['/angular-material']">Angular Material</button>
+        </mat-drawer>
+        <mat-drawer-content class="drawer-content">  
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

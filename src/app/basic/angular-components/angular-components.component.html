@@ -1,0 +1,50 @@
+<div class="introduction">
+  <div class="body">
+      <div class="card">
+          <h1>Angular Components</h1>
+          <div class="accordion-padding"></div>
+          <mat-accordion>
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title><h2 class="card-title">1.Components</h2></mat-panel-title>
+                </mat-expansion-panel-header>
+                <div>
+                <p>Components are the building blocks of the angular application.</p>
+                <p>Like React Components, angular components contains which is <b>reusable</b>.</p>
+                <p>Angular Components contains <b>@Component decorator</b> which contains basic properties such as:</p>
+                <ul>
+                    <li><b>CSS Selector:</b> Value we are using here is the actual name of the component which we can reuse as html tag in some other components
+                        <div class="terminal" >
+                            <pre>
+@Component &#123;&#40;
+selector: 'hello-world',
+&#41;&#125; 
+
+In another component HTML,
+&lt;hello-world&gt; &lt;/hello-world&gt;
+                            </pre>
+                        </div>
+                    </li>
+                    <li><b>TemplateUrl:</b> It will maps HTML template for this component</li>
+                    <li><b>styleurl: </b> It will add styles to this component.</li>
+                </ul>
+                <h3>Example:</h3>
+                <div class="terminal" >
+                    <pre>
+import &#123; Component &#125; from '@angular/core';
+@Component &#123;&#40;
+selector: 'hello-world',
+template: '&lt;h1&gt; Hi&lt;/h1&gt;'
+&#41;&#125;
+export class HelloWorldComponent &#123;
+// The code in this class drives the component's behavior.
+&#125;                       
+                    </pre>
+                </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+          
+      </div>
+  </div>
+</div>
