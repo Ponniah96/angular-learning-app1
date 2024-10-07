@@ -1,56 +1,19 @@
 <div class="introduction">
   <div class="body">
-      <div class="card">
+      <div class="card angular-router-menus">
           <h1>Angular Routes</h1>
-          <div class="accordion-padding"></div>
-          <mat-accordion>
-            <mat-expansion-panel expanded>
-                <mat-expansion-panel-header>
-                    <mat-panel-title><h2 class="card-title">Router</h2></mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="card-content">
-                    <p>Angular router is used to navigate angular app from single page to multiple apps</p>
-                    <h3>Example:</h3>
-                    <a class="link" [routerLink]="['/nav1']">
-                        Navigation Component 1
-                    </a> |
-                    <a class="link" [routerLink]="['/nav2']">
-                        Navigation Component 2
-                    </a>
-                    <!-- <router-outlet></router-outlet> -->
-                    <div class="terminal" >
-                        <pre>
-    
-<b>In app-routing-module.ts </b>
-import &#123; NgModule &#125; from '@angular/core';
-import &#123; RouterModule, Routes &#125; from '@angular/router';
-
-import &#123; NavigationComponentComponent &#125; from './navigation-component/navigation-component.component';
-import &#123; Navigation2Component &#125; from './navigation2/navigation2.component';
-
-const routes: Routes = [
-&#123;path:'nav1', component:NavigationComponentComponent&#125;,
-&#123;path:'nav2', component:Navigation2Component&#125;
-];
-
-@NgModule&#40;&#123;
-imports: [RouterModule.forRoot&#40;routes&#41;],
-exports: [RouterModule]
-&#125;&#41;
-export class AppRoutingModule &#123; &#125;
-
-<b>In introduction.component.html</b>
-&lt;a class="link" [routerLink]="['/nav1']"&gt;
-Navigation Component 1
-&lt;/a&gt;
-&lt;a class="link" [routerLink]="['/nav2']"&gt;
-Navigation Component 2
-&lt;/a&gt;
-                        </pre>
-                    </div>
+          <mat-grid-list cols={{gridColumns}} rowHeight="1:4" >
+            <mat-grid-tile colspan={{gridMenuColumns}} rowspan="2" >
+                <div class="angular-router-menu-links">
+                    <a mat-button class="link" routerLink="/angular-routes" >Home</a>
+                    <a mat-button class="link" routerLink="nav1" >Navigation Component 1</a>
+                    <a mat-button class="link" routerLink="nav2" >Navigation Component 2</a>
                 </div>
-            </mat-expansion-panel>
-        </mat-accordion>
+            </mat-grid-tile>
+            <mat-grid-tile colspan={{gridContentColumns}}>
+                <router-outlet></router-outlet>
+            </mat-grid-tile>
+          </mat-grid-list>
       </div>
   </div>
 </div>

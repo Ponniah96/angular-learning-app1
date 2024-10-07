@@ -104,3 +104,29 @@ margin: 0;
 .example-spacer{
     flex: 1 1 auto;
 }
+::ng-deep .angular-router-menus .mat-grid-tile-content{
+    align-items: flex-start;
+}
+
+/* @media screen and (max-width: 960px) {
+
+::ng-deep .mat-grid-tile{
+    height: 200px;
+    padding-top: 0px !important;
+    margin-top: 50px !important;
+}
+} */
+
+.angular-router-menu-links{
+    display: flex;
+    flex-direction: column;
+}
+
+/* @media screen and (max-width: 960px) {
+    
+    .angular-router-menu-links{
+        flex-direction: row;
+        margin-bottom: 50px !important;
+    }
+    
+} */

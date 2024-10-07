@@ -12,12 +12,17 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+import {MatDividerModule} from '@angular/material/divider';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
-import { NavigationComponentComponent } from './navigation-component/navigation-component.component';
-import { Navigation2Component } from './navigation2/navigation2.component';
+import { Navigation2Component } from './basic/navigation2/navigation2.component';
+import { NavigationComponentComponent } from './basic/navigation-component/navigation-component.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AngularCLIComponent } from './angular-cli/angular-cli.component';
@@ -26,6 +31,9 @@ import { AngularTemplatesComponent } from './basic/angular-templates/angular-tem
 import { AngularRoutesComponent } from './basic/angular-routes/angular-routes.component';
 import { AngularFormsComponent } from './basic/angular-forms/angular-forms.component';
 import { AngularMaterialHomepageComponent } from './angular-material/angular-material-homepage/angular-material-homepage.component';
+import { AngularRoutesHomeComponent } from './basic/angular-routes-home/angular-routes-home.component';
+import { AngularMaterialTableComponent } from './angular-material/angular-material-table/angular-material-table.component';
+import { AngularMaterialHomepageContentComponent } from './angular-material/angular-material-homepage-content/angular-material-homepage-content.component';
 
 @NgModule({
   imports: [
@@ -42,6 +50,11 @@ import { AngularMaterialHomepageComponent } from './angular-material/angular-mat
     MatGridListModule,
     MatToolbarModule,
     MatListModule,
+    MatTableModule,
+    MatDividerModule,
+    MatPaginatorModule,
+    MatFormFieldModule, 
+    MatInputModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -61,7 +74,10 @@ import { AngularMaterialHomepageComponent } from './angular-material/angular-mat
     AngularTemplatesComponent,
     AngularRoutesComponent,
     AngularFormsComponent,
-    AngularMaterialHomepageComponent
+    AngularMaterialHomepageComponent,
+    AngularRoutesHomeComponent,
+    AngularMaterialTableComponent,
+    AngularMaterialHomepageContentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,277 +1,35 @@
 <div class="introduction">
   <div class="body">
-      <div class="card">
-          <h1>Angular Material</h1>
-          <div class="accordion-padding"></div>
-          <mat-accordion>
-            <mat-expansion-panel expanded>
-                <mat-expansion-panel-header>
-                    <mat-panel-title><h2 class="card-title">Angular Material</h2></mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="card-content">
-                    <p>Angular material is the material components of angular. (i.e: Angular components with predefined styles and functions) </p>
-                    <h3 class="card-subtitle">Advantages</h3>
-                    <ul>
-                        <li>HighQuality:    Internationalized acceptable components ensures with multiple level of testing.</li>
-                        <li>Versatile:      You can use components with angular material design or else use your own components</li>
-                        <li>Frictionless:   Work in seamlessly</li>
-                    </ul>
-                    <h3 class="card-subtitle">Display Toggle Component</h3>
-                    <mat-slide-toggle>Toggle me!</mat-slide-toggle>
-                    <h3 class="card-subtitle">Display Button Component</h3>
-                    <div><button mat-button color="primary" >Primary</button></div>
-                    <div><button mat-stroke-button color="basic">Basic</button></div>
-                    <div><button mat-raised-button color="accent">Accent</button></div>
-                    <div><button mat-flat-button color="warn">Warn</button></div>
-                    <div>
-                        <button mat-icon-button color="warn">
-                            <mat-icon>favorite</mat-icon>
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-fab color="primary">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </div>
-                    <div>
-                        <button mat-mini-fab color="accent">
-                            <mat-icon>menu</mat-icon>
-                        </button>
-                    </div>
-                    <h3 class="card-subtitle">Accordion Component</h3>
-                    <mat-accordion>
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>Accordion Title</mat-panel-title>
-                                <mat-panel-description>Accordion Description</mat-panel-description>
-                            </mat-expansion-panel-header>
-                            <p>Accordion Hide/Show Text</p>
-                        </mat-expansion-panel>
-                    </mat-accordion>
-                    <h3 class="card-subtitle">Display Side NavBar</h3>
-                    <mat-drawer-container  class="drawer-container" [hasBackdrop]="true">
-                        <mat-drawer #drawer class="drawer-navBar" mode="over">
-                            <div style="display: flex;">
-                                <span class="example-spacer"></span>
-                                <button mat-icon-button (click)="drawer.toggle()">
-                                    <mat-icon>close</mat-icon>
-                                </button>
-                            </div>
-                            <h2>Welcome to sideNavBar</h2>
-                        </mat-drawer>
-                        <mat-drawer-content class="drawer-content">  
-                            <div style="display: flex;">
-                                <h2 style="padding: 10px;">Open Menu Bar</h2> 
-                                <span class="example-spacer"></span>
-                                <button mat-icon-button (click)="drawer.toggle()">
-                                    <mat-icon>menu</mat-icon>
-                                </button>
-                            </div>
-                        </mat-drawer-content>
-                    </mat-drawer-container> 
-                    <h3 class="card-subtitle">Display Menu</h3>     
-                    <h4>1.Basic Menu</h4> 
-                    <div style="border: 1px solid;padding: 20px 0px;">
-                        <button mat-button [matMenuTriggerFor]="menu">Display Menu</button>     
-                        <mat-menu #menu="matMenu">
-                            <button mat-menu-item>Item 1</button>
-                            <button mat-menu-item>Item 2</button>
-                        </mat-menu>   
-                    </div>
-                    <h4>2.Nested Menu</h4> 
-                    <div style="border: 1px solid;padding: 20px 0px;">
-                        <button mat-button [matMenuTriggerFor]="menus">Display Nested Menu</button>     
-                        <mat-menu #menus="matMenu">
-                            <button mat-menu-item [matMenuTriggerFor]="items">Item</button>
-                            <button mat-menu-item [matMenuTriggerFor]="item">Item</button>
-                        </mat-menu> 
-                        <mat-menu #items="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>  
-                        <mat-menu #item="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>   
-                    </div>
-                    <h3 class="card-subtitle">Grid</h3>
-                    <mat-grid-list cols={{gridColumns}} rowHeight="50px">
-                        <mat-grid-tile class="grid-list">1</mat-grid-tile>
-                        <mat-grid-tile class="grid-list">2</mat-grid-tile>
-                        <mat-grid-tile class="grid-list">3</mat-grid-tile>
-                        <mat-grid-tile class="grid-list">4</mat-grid-tile>
-                    </mat-grid-list>
-                    <h3 class="card-subtitle">Toolbar</h3>
-                    <mat-toolbar>
-                        <span>Header-Mobile</span>
-                        <span class="example-spacer"></span>
-                        <button mat-icon-button class="example-icon">
-                            <mat-icon>menu</mat-icon>
-                        </button>
-                    </mat-toolbar>
-                    <mat-toolbar>
-                        <span>Header-Desktop</span>
-                        <button mat-button [matMenuTriggerFor]="headerMenu1">Menu1</button>     
-                        <mat-menu #headerMenu1="matMenu">
-                            <button mat-menu-item [matMenuTriggerFor]="headerMenu1items">Item</button>
-                            <button mat-menu-item [matMenuTriggerFor]="headerMenu1item">Item</button>
-                        </mat-menu> 
-                        <mat-menu #headerMenu1items="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>  
-                        <mat-menu #headerMenu1item="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>   
-                        <button mat-button [matMenuTriggerFor]="headerMenu2">Menu2</button>     
-                        <mat-menu #headerMenu2="matMenu">
-                            <button mat-menu-item [matMenuTriggerFor]="headerMenu2items">Item</button>
-                            <button mat-menu-item [matMenuTriggerFor]="headerMenu2item">Item</button>
-                        </mat-menu> 
-                        <mat-menu #headerMenu2items="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>  
-                        <mat-menu #headerMenu2item="matMenu">
-                            <button mat-menu-item>Item</button>
-                            <button mat-menu-item>Item</button>
-                        </mat-menu>   
-                    </mat-toolbar>
-                    <mat-toolbar>
-                        <span>Responsive Header</span>
-                        <div [ngStyle]="{'display': DesktopHeaderMenu}">
-                            <button mat-button [matMenuTriggerFor]="responsiveHeader1">Menu1</button>     
-                            <mat-menu #responsiveHeader1="matMenu">
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveHeader1items">Item</button>
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveHeader1item">Item</button>
-                            </mat-menu> 
-                            <mat-menu #responsiveHeader1items="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>  
-                            <mat-menu #responsiveHeader1item="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>   
-                            <button mat-button [matMenuTriggerFor]="responsiveHeader2">Menu2</button>     
-                            <mat-menu #responsiveHeader2="matMenu">
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveHeader2items">Item</button>
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveHeader2item">Item</button>
-                            </mat-menu> 
-                            <mat-menu #responsiveHeader2items="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>  
-                            <mat-menu #responsiveHeader2item="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu> 
-                        </div>
-                        <div [ngStyle]="{'display': MobileHeaderMenu, 'width':'inherit'}">
-                            <div style="display: flex;">
-                                <span class="example-spacer"></span>
-                                <button mat-icon-button class="example-icon" (click)="mobileHeader.toggle()">
-                                    <mat-icon>menu</mat-icon>
-                                </button> 
-                            </div>
-                        </div>
-                    </mat-toolbar>
-                    <mat-drawer-container [ngStyle]="{'display': MobileHeaderMenu}" class="drawer-container" [hasBackdrop]="true">
-                        <mat-drawer #mobileHeader class="drawer-navBar" mode="over">
-                            <div style="display: flex;">
-                                <span class="example-spacer"></span>
-                                <button mat-icon-button (click)="mobileHeader.toggle()">
-                                    <mat-icon>close</mat-icon>
-                                </button>
-                            </div>
-                            <button mat-button [matMenuTriggerFor]="responsiveMobileHeader1" style="display: block;">Menu1</button>     
-                            <mat-menu #responsiveMobileHeader1="matMenu">
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveMobileHeader1items">Item</button>
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveMobileHeader1item">Item</button>
-                            </mat-menu> 
-                            <mat-menu #responsiveMobileHeader1items="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>  
-                            <mat-menu #responsiveMobileHeader1item="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>   
-                            <button mat-button [matMenuTriggerFor]="responsiveMobileHeader2" style="display: block;">Menu2</button>     
-                            <mat-menu #responsiveMobileHeader2="matMenu">
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveMobileHeader2items">Item</button>
-                                <button mat-menu-item [matMenuTriggerFor]="responsiveMobileHeader2item">Item</button>
-                            </mat-menu> 
-                            <mat-menu #responsiveMobileHeader2items="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu>  
-                            <mat-menu #responsiveMobileHeader2item="matMenu">
-                                <button mat-menu-item>Item</button>
-                                <button mat-menu-item>Item</button>
-                            </mat-menu> 
-                        </mat-drawer>
-                        <mat-drawer-content class="drawer-content">  
-                            <div style="display: flex; align-items: center;text-align: center;height: inherit;justify-content: center;">
-                                <h2 style="padding: 10px;">Body</h2> 
-                            </div>
-                        </mat-drawer-content>
-                    </mat-drawer-container> 
-                    <mat-toolbar>
-                        <mat-toolbar-row style="height: 400px;">
-                            <mat-grid-list cols={{gridColumns}} rowHeight="400px" style="width: inherit;">
-                                <mat-grid-tile >
-                                    <mat-list role="list" >
-                                        <div mat-subheader>Tutorials</div>
-                                        <mat-list-item role="listitem">HTML Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">CSS Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">JavaScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">TypeScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Redux Tutorial</mat-list-item>
-                                    </mat-list>
-                                </mat-grid-tile>
-                                <mat-grid-tile >
-                                    <mat-list role="list">
-                                        <div mat-subheader>Tutorials</div>
-                                        <mat-list-item role="listitem">HTML Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">CSS Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">JavaScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">TypeScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Redux Tutorial</mat-list-item>
-                                    </mat-list>
-                                </mat-grid-tile>
-                                <mat-grid-tile>
-                                    <mat-list role="list">
-                                        <div mat-subheader>Tutorials</div>
-                                        <mat-list-item role="listitem">HTML Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">CSS Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">JavaScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">TypeScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Redux Tutorial</mat-list-item>
-                                    </mat-list>
-                                </mat-grid-tile>
-                                <mat-grid-tile>
-                                    <mat-list role="list">
-                                        <div mat-subheader>Tutorials</div>
-                                        <mat-list-item role="listitem">HTML Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">CSS Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">JavaScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">TypeScript Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Tutorial</mat-list-item>
-                                        <mat-list-item role="listitem">React Redux Tutorial</mat-list-item>
-                                    </mat-list>
-                                </mat-grid-tile>
-                            </mat-grid-list>
-                        </mat-toolbar-row>
-                        <mat-toolbar-row><span>Footer Row 2</span></mat-toolbar-row>
-                    </mat-toolbar>
+      <div class="card angular-router-menus">
+        <div class="accordion-padding"></div>
+          <mat-grid-list cols="4" rowHeight="1:4" >
+            <mat-grid-tile colspan="1" >
+                <div class="angular-router-menu-links">
+                    <a mat-button class="link" routerLink="/angular-material" >Home</a>
+                    <a mat-button class="link" routerLink="nav1" >Buttons</a>
+                    <a mat-button class="link" routerLink="nav2" >Toggle Button</a>
+                    <a mat-button class="link" routerLink="nav1" >Accordion</a>
+                    <a mat-button class="link" routerLink="nav2" >Side NavBar</a>
+                    <a mat-button class="link" routerLink="nav1" >Menubar</a>
+                    <a mat-button class="link" routerLink="nav2" >Toolbar</a>
+                    <a mat-button class="link" routerLink="nav1" >Grid</a>
+                    <a mat-button class="link" routerLink="nav2" >Card</a>
+                    <a mat-button class="link" routerLink="table" >Table</a>
+                    <a mat-button class="link" routerLink="nav2" >Tree Structure</a>
+                    <a mat-button class="link" routerLink="nav1" >Tabs</a>
+                    <a mat-button class="link" routerLink="nav1" >Dialog</a>
+                    <a mat-button class="link" routerLink="nav2" >Tooltip</a>
+                    <a mat-button class="link" routerLink="nav1" >Snackbar</a>
+                    <a mat-button class="link" routerLink="nav2" >Progress Spinner</a>
+                    <a mat-button class="link" routerLink="nav1" >Progress Bar</a>
+
                 </div>
-            </mat-expansion-panel>
-        </mat-accordion>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="3">
+                <div class="accordion-padding"></div>
+                <router-outlet></router-outlet>
+            </mat-grid-tile>
+          </mat-grid-list>
           
       </div>
   </div>
