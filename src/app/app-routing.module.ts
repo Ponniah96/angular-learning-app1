@@ -13,6 +13,8 @@ import { AngularRoutesHomeComponent } from './basic/angular-routes-home/angular-
 import { AngularMaterialHomepageComponent } from './angular-material/angular-material-homepage/angular-material-homepage.component';
 import { AngularMaterialHomepageContentComponent } from './angular-material/angular-material-homepage-content/angular-material-homepage-content.component';
 import { AngularMaterialTableComponent } from './angular-material/angular-material-table/angular-material-table.component';
+import { AngularMaterialCardComponent } from './angular-material/angular-material-card/angular-material-card.component';
+import { AngularMaterialTreeComponent } from './angular-material/angular-material-tree/angular-material-tree.component';
 
 const routes: Routes = [
   {path:'angular-cli', component:AngularCLIComponent},
@@ -31,6 +33,8 @@ const routes: Routes = [
    component:AngularMaterialHomepageComponent,
    children: [
     {path:'table', component:AngularMaterialTableComponent},
+    {path:'card', component:AngularMaterialCardComponent},
+    {path:'tree', component:AngularMaterialTreeComponent},
     {path:'', component:AngularMaterialHomepageContentComponent}
   ]
   },

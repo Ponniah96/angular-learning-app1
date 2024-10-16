@@ -17,6 +17,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSortModule} from '@angular/material/sort';
+import {MatCardModule} from '@angular/material/card';
+import {MatTreeModule} from '@angular/material/tree';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +37,8 @@ import { AngularMaterialHomepageComponent } from './angular-material/angular-mat
 import { AngularRoutesHomeComponent } from './basic/angular-routes-home/angular-routes-home.component';
 import { AngularMaterialTableComponent } from './angular-material/angular-material-table/angular-material-table.component';
 import { AngularMaterialHomepageContentComponent } from './angular-material/angular-material-homepage-content/angular-material-homepage-content.component';
+import { AngularMaterialCardComponent } from './angular-material/angular-material-card/angular-material-card.component';
+import { AngularMaterialTreeComponent } from './angular-material/angular-material-tree/angular-material-tree.component';
 
 @NgModule({
   imports: [
@@ -55,6 +60,9 @@ import { AngularMaterialHomepageContentComponent } from './angular-material/angu
     MatPaginatorModule,
     MatFormFieldModule, 
     MatInputModule,
+    MatSortModule,
+    MatCardModule,
+    MatTreeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -77,7 +85,9 @@ import { AngularMaterialHomepageContentComponent } from './angular-material/angu
     AngularMaterialHomepageComponent,
     AngularRoutesHomeComponent,
     AngularMaterialTableComponent,
-    AngularMaterialHomepageContentComponent
+    AngularMaterialHomepageContentComponent,
+    AngularMaterialCardComponent,
+    AngularMaterialTreeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,8 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, inject } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
+import {MatSort, Sort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 export interface PeriodicElement {
   name: string;
@@ -28,19 +30,29 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./angular-material-table.component.css']
 })
 export class AngularMaterialTableComponent implements AfterViewInit {
+  private _liveAnnouncer = inject(LiveAnnouncer);
   displayedColumns: string[] = ['positions', 'name', 'weight', 'symbol'];
   // dataSource = ELEMENT_DATA;
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(event: Event){
-    console.log('applyFilter', event.target);
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  sortData(sortState: Sort) {
+    if (sortState.direction) {
+      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+    } else {
+      this._liveAnnouncer.announce('Sorting cleared');
+    }
   }
 
 }
