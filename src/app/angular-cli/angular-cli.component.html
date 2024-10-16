@@ -20,7 +20,11 @@ ng new my-app
 cd ./my-app 
 
 Get local machine access:
+For windows:
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+For Mac: 
+System Setting --> Privacy & securiy --> Full Disk Access --> Visual Studio toggle ON
+sudo chown -R ponniah /Users/ponniah/Documents/Learning/Angular/ikigaiFrontEnd/my-app 
 
 Run Local app:
 ng serve --open
@@ -45,11 +49,21 @@ Create Service for our application:
 ng generate service introduction-service
 
 Deploy Application using GitHub:
+For angular v16:
 ng build --output-path docs --base-href my-app
 git add . 
 git status 
 git commit -m "Push Code Comments"
 git push -u origin main
+
+For angular v18:
+ng build --output-path docs --base-href my-app
+sudo ng add angular-cli-ghpages
+sudo npx angular-cli-ghpages --dir=docs/browser
+GitHub Pages:
+select gh-pages branch, root folder and click on save
+https://www.youtube.com/watch?v=EWAzIUS7Knk
+
       
                           </pre>
                       </div>
